@@ -1,4 +1,4 @@
-package com.javarush.task.task22.task2212;
+package com.company;
 
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static boolean checkTelNumber(String telNumber) {
         if (telNumber == null) return false;
-
+        int t;
         //1
         boolean plus = telNumber.startsWith("+") && countDigits(telNumber) == 12;
 
