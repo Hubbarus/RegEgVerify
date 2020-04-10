@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,7 +29,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static boolean checkTelNumber(String telNumber) {
         if (telNumber == null) return false;
-        int t;
+
         //1
         boolean plus = telNumber.startsWith("+") && countDigits(telNumber) == 12;
 
@@ -78,8 +77,7 @@ public class Main {
             count--;
         }
 
-        if (count == 0) return true;
-        else return false;
+        return count == 0;
     }
 
     public static boolean haveBraces(String tel) {
@@ -103,8 +101,7 @@ public class Main {
             int start = mat.start();
             while (matcher.find()) {
                 int st = matcher.start();
-                if (st < start) return false;
-                else return true;
+                return st >= start;
             }
         }
         return false;
