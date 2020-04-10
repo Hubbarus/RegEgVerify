@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static boolean checkTelNumber(String telNumber) {
         if (telNumber == null) return false;
-        int tmp;
+
         //1
         boolean plus = telNumber.startsWith("+") && countDigits(telNumber) == 12;
 
